@@ -39,3 +39,7 @@ lub z zainstalowanym globalnie Angular CLI (`@angular/cli`)
 ```shell
 ng build --prod
 ```
+
+### Wyłączenia sprawdzania znaku końca linii dla systemu Windows
+
+W pliku `tslint.json` należy ustawić flagę `eofline` na wartość `false`
