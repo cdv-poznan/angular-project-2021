@@ -1,6 +1,20 @@
-# Angular Project
+# Angular + Typescript Project - AKAI Music Machine
+## Collegium Da Vinci Poznań 2020/2021
+### Z repozytorium https://github.com/cdv-poznan/angular-project-2021
+## AKAI Music Machine - emulator  kultowego sekwencera/samplera firmy AKAI
+### Naciskamy pady i z przypisanych do nich ścieżek tworzymy własną melodię
+LINKI:
+* [AKAI MPC] (https://pl.wikipedia.org/wiki/Akai_MPC)
+* [AKAI PRO] (https://www.akaipro.com/)
+### Sterowanie z poziomu klawiatury:
+klawisz Z | klawisz X | klawisz C | klawisz V | klawisz B | klawisz N | klawisz M | klawisz K | klawisz L
+-------- | -------- | ---------- | -------- | ------ | -------- | -------- | -------- | --------
+perkusja | gitara akustyczna | gitara basowa | keyboard | trąbka | śpiew kobiecy | Beatbox 1 | Beatbox 2 | chór
+### Sterowanie myszką: play -> click; stop -> click
+### Dotknięcie na ekranie dotykowym - przytrzymujemy dane przyciski i gramy melodię
+### Ścieżki zrobione przez Piotr "Liroy" Marzec (gitara akustyczna, keyboard, trąbka) oraz Marcin "Cytrobit" Ciesielski (reszta ścieżek)
 
-Starter wygenerowany przez [Angular CLI](https://github.com/angular/angular-cli) w wersji 11.2.10.
+> Działająca w pełni wersja dostępna pod adresem: [`http://frontend.ovh/`](http://frontend.ovh/).
 
 ## Instalacja zależności
 
@@ -39,7 +53,3 @@ lub z zainstalowanym globalnie Angular CLI (`@angular/cli`)
 ```shell
 ng build --prod
 ```
-
-### Wyłączenia sprawdzania znaku końca linii dla systemu Windows
-
-W pliku `tslint.json` należy ustawić flagę `eofline` na wartość `false`
