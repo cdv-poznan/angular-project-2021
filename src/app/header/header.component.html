@@ -1,0 +1,26 @@
+<mat-toolbar>
+  <h5 class="logo">Baguetti</h5>
+  <nav mat-tab-nav-bar>
+    <a
+      mat-tab-link
+      *ngFor="let link of links"
+      [routerLink]="link.route"
+      (click)="activeLink = link.route"
+      [active]="activeLink == link.route"
+    >
+      {{ link.name }}
+    </a>
+  </nav>
+  <div class="buttons">
+    <app-button
+      buttonText="Login"
+      buttonColor="primary"
+      class="login-btn"
+    ></app-button>
+    <app-button
+      buttonText="Register"
+      buttonColor="basic"
+      class="register-btn"
+    ></app-button>
+  </div>
+</mat-toolbar>
