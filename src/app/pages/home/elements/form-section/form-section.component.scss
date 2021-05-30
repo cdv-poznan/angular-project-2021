@@ -1,0 +1,28 @@
+.form-component {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+}
+.form-container {
+  width: 40%;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+mat-form-field {
+  width: 100%;
+}
+.right-form-pic-container {
+  width: 58%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../../../../assets/damian-zaleski-RYyr-k3Ysqg-unsplash.jpg);
+}
+.form-text {
+  font-size: 1rem;
+  font-weight: 300;
+  text-align: justify;
+}
