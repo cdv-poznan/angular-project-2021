@@ -9,7 +9,7 @@ export class HeaderComponent implements OnInit {
   links = [
     {
       name: "Home",
-      route: "/"
+      route: ""
     },
     {
       name: "Recipies",
