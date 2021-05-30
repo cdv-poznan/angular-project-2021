@@ -15,6 +15,18 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTabsModule } from '@angular/material/tabs';
 import { ButtonComponent } from './elements/button/button.component';
 import { MatButtonModule } from '@angular/material/button';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule } from '@angular/forms'
+
+import { BannerComponent } from './pages/home/elements/banner/banner.component';
+import { SecPicLeftComponent } from './pages/home/elements/sec-pic-left/sec-pic-left.component';
+import { SecPicRightComponent } from './pages/home/elements/sec-pic-right/sec-pic-right.component';
+import { ColumnsComponent } from './pages/home/elements/columns/columns.component';
+import { FormSectionComponent } from './pages/home/elements/form-section/form-section.component';
 
 
 
@@ -25,8 +37,8 @@ const appRoues: Routes = [
 ]
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, HomeComponent, RecipiesComponent, ListComponent, ButtonComponent],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, MatToolbarModule, MatTabsModule, MatButtonModule, RouterModule.forRoot(appRoues, {enableTracing: true})],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, HomeComponent, RecipiesComponent, ListComponent, ButtonComponent, BannerComponent, SecPicLeftComponent, SecPicRightComponent, ColumnsComponent, FormSectionComponent],
+  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, MatToolbarModule, MatTabsModule, MatSelectModule, MatFormFieldModule, MatInputModule, MatGridListModule, MatButtonModule, FormsModule, MatIconModule, RouterModule.forRoot(appRoues, {enableTracing: true})],
   providers: [],
   bootstrap: [AppComponent],
 })
