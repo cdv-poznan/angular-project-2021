@@ -82,20 +82,11 @@ button {
   font-size: 1.5rem;
   transition: rotate 1s ease-in-out;
   text-align: center;
-  &:hover {
-    transition-duration: 2s;
-    //transform: rotate(60deg);
-    rotate: 60deg; //only firefox
-  }
-}
-
-.home {
-  background-color: #333;
-  color: $gold;
-  border-color: $gold;
-  position: fixed;
-  bottom: 30px;
-  right: 50px;
+  //&:hover {
+  //  transition-duration: 2s;
+  //  //transform: rotate(60deg);
+  //  //rotate: 60deg; //only firefox
+  //}
 }
 
 h1 {

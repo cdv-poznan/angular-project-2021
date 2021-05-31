@@ -8,9 +8,22 @@ import { MatButtonModule } from '@angular/material/button';
 import { HomeComponent } from './home/home.component';
 import { GameComponent } from './game/game.component';
 import { CardComponent } from './game/card/card.component';
+import { HomeButtonComponent } from './home-button/home-button.component';
+import { HitButtonComponent } from './hit-button/hit-button.component';
+import { StandButtonComponent } from './game/stand-button/stand-button.component';
+import { StartButtonComponent } from './home/start-button/start-button.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, GameComponent, CardComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    GameComponent,
+    CardComponent,
+    HomeButtonComponent,
+    HitButtonComponent,
+    StandButtonComponent,
+    StartButtonComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, MatIconModule, MatButtonModule],
   providers: [],
   bootstrap: [AppComponent],

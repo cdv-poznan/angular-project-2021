@@ -1,8 +1,4 @@
-$green: #285943;
 $gold: #bfae48;
-$maroon: #561f37;
-$blue: #2B59C3;
-$snow: #FFFBFF;
 
 section{
   margin: 16px;
@@ -12,25 +8,4 @@ section{
   color: $gold;
   border: 5px groove;
   margin: 20px auto;
-}
-
-#hitBtn, #standBtn{
-  font-size: medium;
-  height: 64px;
-  width: 64px;
-  box-shadow: 2px 2px 8px #333;
-  margin: 4px;
-}
-
-#hitBtn{
-  border: 4px dashed $gold;
-  background-color: $maroon;
-  color: $gold;
-}
-
-#standBtn{
-  font-size: small;
-  border: 4px dashed $snow;
-  background-color: $blue;
-  color: $snow;
 }
