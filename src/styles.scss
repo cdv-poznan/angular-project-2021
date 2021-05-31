@@ -1,1 +1,106 @@
-/* You can add global styles to this file, and also import other style files */
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+//// Define the palettes for your theme using the Material Design palettes available in palette.scss
+//// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+//// hue. Available color palettes: https://material.io/design/color/
+//$primary: mat-palette($mat-indigo);
+//$accent: mat-palette($mat-pink, A200, A100, A400);
+//
+//// The warn palette is optional (defaults to red).
+//$warn: mat-palette($mat-red);
+//
+//// Create the theme object. A theme consists of configurations for individual
+//// theming systems such as "color" or "typography".
+//$theme: mat-light-theme((
+//  color: (
+//    primary: $primary,
+//    accent: $accent,
+//    warn: $warn,
+//  )
+//));
+//
+//// Include theme styles for core and each component used in your app.
+//// Alternatively, you can import and @include the theme mixins for each component
+//// that you are using.
+//@include angular-material-theme($theme);
+//
+///* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+$green: #285943;
+$gold: #bfae48;
+$maroon: #561f37;
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  max-width: 100%;
+  text-transform: uppercase;
+  // transition: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+body {
+  align-items: center;
+  text-align: center;
+  //padding-top: 10px;
+  justify-content: center;
+  display: block;
+  background-color: $green;
+}
+
+header {
+  font-size: xxx-large;
+  border-bottom: 10px ridge $maroon;
+  background-color: #333;
+
+}
+//
+//main {
+//  position: relative;
+//}
+
+button {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  border: 4px dashed #000;
+  background-color: #fff;
+  box-shadow: 2px 2px 8px $maroon;
+  font-weight: bold;
+  font-size: 1.5rem;
+  transition: rotate 1s ease-in-out;
+  text-align: center;
+  &:hover {
+    transition-duration: 2s;
+    //transform: rotate(60deg);
+    rotate: 60deg; //only firefox
+  }
+}
+
+.home {
+  background-color: #333;
+  color: $gold;
+  border-color: $gold;
+  position: fixed;
+  bottom: 30px;
+  right: 50px;
+}
+
+h1 {
+  color: $gold;
+  text-shadow: 2px 2px 8px $maroon;
+  margin: auto;
+  padding-top: 10px;
+}

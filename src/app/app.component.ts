@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  public title = 'Angular Project 2021';
+  public title = 'Black Jack';
 
   public ngOnInit() {}
 }
