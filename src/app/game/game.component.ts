@@ -12,14 +12,17 @@ export class GameComponent implements OnInit {
   cards: Card[][];
   dealersHand: Card[] = [];
   playersHand: Card[] = [];
+  playerCounter: number;
+  dealerCounter: number;
   constructor(public deck: NewDeckService) {}
 
   ngOnInit(): void {
     const cards = this.deck.newDeck();
-    const dealersCard1 = this.deck.drawACard(cards);
-    this.dealersHand[0] = dealersCard1;
+    this.dealersHand[0] = this.deck.drawACard(cards);
+    this.dealerCounter = 1;
     this.playersHand[0] = this.deck.drawACard(cards);
     this.playersHand[1] = this.deck.drawACard(cards);
+    this.playerCounter = 2;
   }
   public sum(array: Array<Card>): number {
     let sum = 0;
@@ -27,7 +30,16 @@ export class GameComponent implements OnInit {
     for (let i = 0; i < array.length; i++) {
       sum += array[i].value;
     }
-
     return sum;
+  }
+  public playerHits() {
+    this.playersHand[this.playerCounter] = this.deck.drawACard(this.cards);
+    console.log(this.playerCounter++);
+  }
+  public playerStands() {
+    while (this.sum(this.dealersHand) < 17) {
+      console.log((this.dealersHand[this.dealerCounter] = this.deck.drawACard(this.cards)));
+      this.dealerCounter++;
+    }
   }
 }

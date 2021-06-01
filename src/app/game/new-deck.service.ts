@@ -24,13 +24,13 @@ export class NewDeckService {
   }
   drawACard(cards: Card[][]): Card {
     let card;
-    do {
-      console.log('this is a feature, not a bug');
-      const rndClr = this.random(4);
-      const rndId = this.random(13);
-      card = this.cards[rndClr][rndId];
-      card.copiesLeft--;
-    } while (card.copiesLeft <= 0);
+    // do {
+    console.log('this is a feature, not a bug');
+    const rndClr = this.random(4);
+    const rndId = this.random(13);
+    card = this.cards[rndClr][rndId];
+    card.copiesLeft--;
+    // } while (card.copiesLeft <= 0);
     return card;
   }
   public random(max: number): number {
