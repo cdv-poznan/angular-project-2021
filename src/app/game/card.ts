@@ -5,9 +5,3 @@ export interface Card {
   copiesLeft: number;
   isAce: boolean;
 }
-// export enum COLOUR {
-//   '♠',
-//   '♥',
-//   '♦',
-//   '♣',
-// }

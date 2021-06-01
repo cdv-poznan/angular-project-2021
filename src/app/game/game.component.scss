@@ -1,5 +1,6 @@
 $gold: #bfae48;
 $snow: #FFFBFF;
+$gold: #bfae48;
 
 section{
   margin: 16px;
@@ -7,17 +8,7 @@ section{
 .score{
   background: #333;
   color: $gold;
-  border: 5px groove;
+  border: 5px $gold groove;
   margin: 20px auto;
+  padding: 5px;
 }
-.reverse{
-  display: inline-block;
-  height: 120px;
-  width: 80px;
-  border-radius: 10%;
-  box-shadow: 2px 2px 8px #333;
-  margin: 10px;
-  background: #561f37;
-  border: 10px $snow solid;
-}
-

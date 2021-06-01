@@ -12,6 +12,9 @@ import { HomeButtonComponent } from './home-button/home-button.component';
 import { HitButtonComponent } from './hit-button/hit-button.component';
 import { StandButtonComponent } from './game/stand-button/stand-button.component';
 import { StartButtonComponent } from './home/start-button/start-button.component';
+import { DialogComponent } from './dialog/dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ByeComponent } from './bye/bye.component';
 
 @NgModule({
   declarations: [
@@ -23,8 +26,10 @@ import { StartButtonComponent } from './home/start-button/start-button.component
     HitButtonComponent,
     StandButtonComponent,
     StartButtonComponent,
+    ByeComponent,
+    DialogComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, MatIconModule, MatButtonModule],
+  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, MatIconModule, MatDialogModule, MatButtonModule],
   providers: [],
   bootstrap: [AppComponent],
 })
