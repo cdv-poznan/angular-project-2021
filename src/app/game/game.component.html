@@ -1,9 +1,11 @@
 <main id="game">
-  <section id="croupier"><div class="score">Dealer's hand: 96</div>
-<!--    <app-card></app-card> <div class="card reverse"></div>-->
+  <section id="croupier"><div class="score">Dealer's hand: {{sum(dealersHand)}}</div>
+    <app-card [card]='dealersHand[0]'></app-card> <div class="reverse"></div>
   </section>
-  <section id="player"><div class="score">Player's hand: 69<!-- {{sum(playersHand)}} --></div></section>
+  <section id="player"><div class="score">Player's hand: {{sum(playersHand)}}</div></section>
   <section id="midSection"><app-hit-button></app-hit-button><app-stand-button></app-stand-button></section>
+  <app-card [card]='playersHand[0]'></app-card>
+  <app-card [card]='playersHand[1]'></app-card>
 </main>
 
 

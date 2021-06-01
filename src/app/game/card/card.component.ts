@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, Input, OnInit } from '@angular/core';
 import { Card } from '../card';
 
 @Component({
@@ -7,8 +7,8 @@ import { Card } from '../card';
   styleUrls: ['./card.component.scss'],
 })
 export class CardComponent implements OnInit {
-  isReversed: boolean;
-  card: Card;
+  @Input() card: Card;
+  @Input() cards: Array<Card>;
   constructor() {}
 
   ngOnInit(): void {}

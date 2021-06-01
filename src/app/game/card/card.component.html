@@ -1,1 +1,10 @@
-<div class="card" [class.reverse]='isReversed'>{{card.colour}}</div>
+<div class="card">
+  <p style="text-align: left; font-size: large;margin: 3px;">{{card.value}}</p>
+
+  <div style="font-size: xxx-large" [ngSwitch]='card.colour'>
+    <div *ngSwitchCase='0'><span style='color: black'>♠</span></div>
+    <div *ngSwitchCase='3'><span style='color: black'>♣</span></div>
+    <div *ngSwitchCase='1'><span style='color: #561f37'>♥</span></div>
+    <div *ngSwitchCase='2'><span style='color: #561f37'>♦</span></div>
+  </div>
+</div>

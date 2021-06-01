@@ -1,4 +1,5 @@
 $gold: #bfae48;
+$snow: #FFFBFF;
 
 section{
   margin: 16px;
@@ -9,3 +10,14 @@ section{
   border: 5px groove;
   margin: 20px auto;
 }
+.reverse{
+  display: inline-block;
+  height: 120px;
+  width: 80px;
+  border-radius: 10%;
+  box-shadow: 2px 2px 8px #333;
+  margin: 10px;
+  background: #561f37;
+  border: 10px $snow solid;
+}
+
