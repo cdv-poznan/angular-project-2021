@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NewDeckService } from './new-deck.service';
 import { Card } from './card';
-import { MatDialogConfig } from '@angular/material/dialog';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { DialogComponent } from '../dialog/dialog.component';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-game',
@@ -9,13 +11,21 @@ import { MatDialogConfig } from '@angular/material/dialog';
   styleUrls: ['./game.component.scss'],
   providers: [NewDeckService],
 })
-export class GameComponent implements OnInit {
+export class GameComponent implements OnInit, OnDestroy {
+  naviSub;
+
   cards: Card[][];
   dealersHand: Card[] = [];
   playersHand: Card[] = [];
   playerCounter: number;
   dealerCounter: number;
-  constructor(public deck: NewDeckService) {}
+  constructor(public deck: NewDeckService, private dialog: MatDialog, private router: Router) {
+    this.naviSub = this.router.events.subscribe((e: any) => {
+      if (e instanceof NavigationEnd) {
+        this.initialiseInvites();
+      }
+    });
+  }
 
   ngOnInit(): void {
     const cards = this.deck.newDeck();
@@ -64,13 +74,13 @@ export class GameComponent implements OnInit {
       this.dealerCounter++;
       if (this.sum(this.dealersHand) > 21) {
         console.log('Winner, winner, chicken dinner');
-        this.openDialog('Dealer busts! You win!');
+        return this.openDialog('Dealer busts! You win!');
       } else if (this.sum(this.dealersHand) < this.sum(this.playersHand)) {
         console.log('You win!');
-        this.openDialog('You have stronger hand - you win!');
+        return this.openDialog('You have stronger hand - you win!');
       } else {
         console.log('You lose!');
-        this.openDialog('Dealer has stronger hand - you lose!');
+        return this.openDialog('Dealer has stronger hand - you lose!');
       }
     }
   }
@@ -80,5 +90,19 @@ export class GameComponent implements OnInit {
       data: message,
       disableClose: true,
     };
+    const dialogRef = this.dialog.open(DialogComponent);
+  }
+
+  private initialiseInvites() {
+    this.dealersHand = [];
+    this.playersHand = [];
+    this.playerCounter = 0;
+    this.dealerCounter = 0;
+    this.ngOnInit();
+  }
+  ngOnDestroy() {
+    if (this.naviSub) {
+      this.naviSub.unsubscribe();
+    }
   }
 }
