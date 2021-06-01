@@ -26,9 +26,17 @@ export class GameComponent implements OnInit {
   }
   public sum(array: Array<Card>): number {
     let sum = 0;
+    let aceCounter = 0;
     // tslint:disable-next-line:prefer-for-of
     for (let i = 0; i < array.length; i++) {
       sum += array[i].value;
+      if (array[i].isAce && sum < 12 && aceCounter === 0) {
+        aceCounter++;
+        sum += 10;
+      }
+    }
+    if (aceCounter === 1 && sum > 21) {
+      sum -= 10;
     }
     return sum;
   }
