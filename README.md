@@ -1,3 +1,8 @@
+This is a simple Blackjack game, no images - CSS only.
+Built with Angular 
+
+https://blackjackcdv.web.app/game
+
 # Angular Project
 
 Starter wygenerowany przez [Angular CLI](https://github.com/angular/angular-cli) w wersji 11.2.10.
