@@ -2,11 +2,8 @@ $blue: #2B59C3;
 $snow: #FFFBFF;
 
 #standBtn{
-  height: 64px;
-  width: 64px;
   box-shadow: 2px 2px 8px #333;
   margin: 4px;
-  font-size: small;
   border: 4px dashed $snow;
   background-color: $blue;
   color: $snow;

@@ -2,12 +2,17 @@ $maroon: #561f37;
 $snow: #FFFBFF;
 
 .card {
+  font-size: x-large;
   display: inline-block;
-  height: 120px;
-  width: 80px;
   background: $snow;
   border: 2px $maroon solid;
   border-radius: 10%;
   box-shadow: 2px 2px 8px #333;
   margin: auto;
+}
+@media (min-width: 800px) {
+.card{
+  height: 15vw;
+  width: 10vw;
+}
 }

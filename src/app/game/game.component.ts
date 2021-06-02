@@ -70,27 +70,22 @@ export class GameComponent implements OnInit, OnDestroy {
   }
   public playerStands() {
     while (this.sum(this.dealersHand) < 17) {
-      console.log((this.dealersHand[this.dealerCounter] = this.deck.drawACard(this.cards)));
+      this.dealersHand[this.dealerCounter] = this.deck.drawACard(this.cards);
       this.dealerCounter++;
-      if (this.sum(this.dealersHand) > 21) {
-        console.log('Winner, winner, chicken dinner');
-        return this.openDialog('Dealer busts! You win!');
-      } else if (this.sum(this.dealersHand) < this.sum(this.playersHand)) {
-        console.log('You win!');
-        return this.openDialog('You have stronger hand - you win!');
-      } else {
-        console.log('You lose!');
-        return this.openDialog('Dealer has stronger hand - you lose!');
-      }
+    }
+    if (this.sum(this.dealersHand) > 21) {
+      console.log('Winner, winner, chicken dinner');
+      return this.openDialog('Dealer busts! You win!');
+    } else if (this.sum(this.dealersHand) < this.sum(this.playersHand)) {
+      console.log('You win!');
+      return this.openDialog('You have stronger hand - you win!');
+    } else {
+      console.log('You lose!');
+      return this.openDialog('Dealer has stronger hand - you lose!');
     }
   }
-
   public openDialog(message: string) {
-    const config: MatDialogConfig = {
-      data: message,
-      disableClose: true,
-    };
-    const dialogRef = this.dialog.open(DialogComponent);
+    this.dialog.open(DialogComponent, { data: message, disableClose: true, position: { left: '20', bottom: '20' } });
   }
 
   private initialiseInvites() {

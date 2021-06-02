@@ -5,7 +5,14 @@ $gold: #bfae48;
 section{
   margin: 16px;
 }
+
+strong{
+    color: $snow;
+    font-size: larger;
+  }
+
 .score{
+  font-size: x-large;
   background: #333;
   color: $gold;
   border: 5px $gold groove;

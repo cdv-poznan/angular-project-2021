@@ -1,8 +1,15 @@
 button{
   align-self: center;
-  width: 360px;
-  height: 360px;
+  width: 75vw;
+  height: 75vw;
   font-size: xxx-large;
   margin-top: 100px;
   border: 16px dashed #000;
+  min-width: 175px;
+  min-height: 175px;
+}
+
+@media (max-width: 300px) {
+button{
+  font-size: xx-large;}
 }

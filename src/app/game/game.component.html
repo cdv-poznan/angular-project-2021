@@ -1,5 +1,5 @@
 <main id="game">
-  <section id="croupier"><div class="score">Dealer's hand: {{sum(dealersHand)}}</div>
+  <section id="croupier"><div class="score">Dealer's hand: <strong>{{sum(dealersHand)}}</strong></div>
     <app-card [card]='dealersHand[0]'></app-card>
     <app-card  *ngIf='dealersHand.length > 1' [card]='dealersHand[1]'></app-card> <ng-template><div *ngIf='dealersHand < 2' class="reverse"></div>
   </ng-template>
@@ -8,7 +8,7 @@
     <app-card  *ngIf='dealersHand.length > 4' [card]='dealersHand[4]'></app-card>
     <app-card  *ngIf='dealersHand.length > 5' [card]='dealersHand[5]'></app-card>
   </section>
-  <section id="player"><div class="score">Player's hand: {{sum(playersHand)}}</div></section>
+  <section id="player"><div class="score">Player's hand: <strong>{{sum(playersHand)}}</strong></div></section>
   <section id="midSection"><app-hit-button (click)='playerHits()'></app-hit-button><app-stand-button (click)='playerStands()'></app-stand-button></section>
   <app-card [card]='playersHand[0]'></app-card>
   <app-card [card]='playersHand[1]'></app-card>
