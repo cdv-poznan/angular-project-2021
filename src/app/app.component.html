@@ -1,6 +1,6 @@
 <header><h1 style="font-size:xxx-large">{{ title }}</h1></header>
-
-<router-outlet></router-outlet>
-
+<div [@routeAnimations]="animateRoute(outlet)" >
+<router-outlet #outlet="outlet"></router-outlet>
+</div>
 <footer>
   <app-home-button></app-home-button></footer>

@@ -1,7 +1,7 @@
 button{
   align-self: center;
-  width: 75vw;
-  height: 75vw;
+  width: 33vw;
+  height: 33vw;
   font-size: xxx-large;
   margin-top: 100px;
   border: 16px dashed #000;
@@ -9,7 +9,7 @@ button{
   min-height: 175px;
 }
 
-@media (max-width: 300px) {
+@media (max-width: 640px) {
 button{
   font-size: xx-large;}
 }

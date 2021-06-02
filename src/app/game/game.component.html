@@ -9,12 +9,12 @@
     <app-card  *ngIf='dealersHand.length > 5' [card]='dealersHand[5]'></app-card>
   </section>
   <section id="player"><div class="score">Player's hand: <strong>{{sum(playersHand)}}</strong></div></section>
-  <section id="midSection"><app-hit-button (click)='playerHits()'></app-hit-button><app-stand-button (click)='playerStands()'></app-stand-button></section>
   <app-card [card]='playersHand[0]'></app-card>
   <app-card [card]='playersHand[1]'></app-card>
   <app-card *ngIf='playersHand.length >= 3' [card]='playersHand[2]'></app-card>
   <app-card *ngIf='playersHand.length >= 4' [card]='playersHand[3]'></app-card>
   <app-card *ngIf='playersHand.length >= 5' [card]='playersHand[4]'></app-card>
+  <app-hit-button (click)='playerHits()'></app-hit-button><app-stand-button (click)='playerStands()'></app-stand-button>
 </main>
 
 

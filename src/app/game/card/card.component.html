@@ -1,12 +1,12 @@
 <div class="card">
   <ng-container [ngSwitch]='card.id'>
-    <p *ngSwitchDefault style="text-align: left; margin: 3px;">{{card.value}}</p>
-    <p *ngSwitchCase='1' style="text-align: left; margin: 3px;">A</p>
-    <p *ngSwitchCase='11' style="text-align: left; margin: 3px;">J</p>
-    <p *ngSwitchCase='12' style="text-align: left; margin: 3px;">Q</p>
-    <p *ngSwitchCase='13' style="text-align: left; margin: 3px;">K</p>
+    <p *ngSwitchDefault style="text-align: left;">{{card.value}}</p>
+    <p *ngSwitchCase='1' style="text-align: left;">A</p>
+    <p *ngSwitchCase='11' style="text-align: left;">J</p>
+    <p *ngSwitchCase='12' style="text-align: left;">Q</p>
+    <p *ngSwitchCase='13' style="text-align: left;">K</p>
   </ng-container>
-  <div style="font-size: xxx-large" [ngSwitch]='card.colour'>
+  <div style="font-size: xxx-large; text-align: center; margin:auto" [ngSwitch]='card.colour'>
     <div *ngSwitchCase='0'><span style="text-align: center; color: black">♠</span></div>
     <div *ngSwitchCase='3'><span style="text-align: center; color: black">♣</span></div>
     <div *ngSwitchCase='1'><span style='color: #561f37'>♥</span></div>

@@ -60,6 +60,9 @@ h1 {
 }
 
 @media (min-width: 800px) {
+  main{
+    max-height: 90%;
+  }
   h1{   font-size: xxx-large;
   }
 }

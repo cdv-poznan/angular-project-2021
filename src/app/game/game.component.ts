@@ -78,10 +78,10 @@ export class GameComponent implements OnInit, OnDestroy {
       return this.openDialog('Dealer busts! You win!');
     } else if (this.sum(this.dealersHand) < this.sum(this.playersHand)) {
       console.log('You win!');
-      return this.openDialog('You have stronger hand - you win!');
+      return this.openDialog('Your hand is higher - you win!');
     } else {
       console.log('You lose!');
-      return this.openDialog('Dealer has stronger hand - you lose!');
+      return this.openDialog(`Dealer's hand is higher - you lose!`);
     }
   }
   public openDialog(message: string) {
