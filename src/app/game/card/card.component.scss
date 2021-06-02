@@ -13,8 +13,7 @@ $snow: #FFFBFF;
   span{
     top:20%;
     display: block;
-    text-align: justify;
-    font-size: 100px;
+    text-align: center;
     position: relative;
     padding: 5px;
   }
@@ -23,5 +22,8 @@ $snow: #FFFBFF;
 .card{
   height: 14vw;
   width: 9vw;
+span{
+  font-size: 10vw;
+}
 }
 }
