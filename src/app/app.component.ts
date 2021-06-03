@@ -1,12 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  selector: 'app',
+  template: `<div class="bg-success p-2 text-white">prototyp aplikacji selcor na zaliczenie</div>`,
 })
-export class AppComponent implements OnInit {
-  public title = 'Angular Project 2021';
-
-  public ngOnInit() {}
-}
+export class AppComponent {}
