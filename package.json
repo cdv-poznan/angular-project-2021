@@ -5,7 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --prod",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "json": "json-server data.js -p 3500 -m authMiddleware.js"
   },
   "private": true,
   "dependencies": {
