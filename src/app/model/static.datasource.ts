@@ -3,7 +3,7 @@ import { Product } from './product.model';
 import { from, Observable } from 'rxjs';
 
 @Injectable()
-export class StaticDatasource {
+export class StaticDataSource {
   private products: Product[] = [
     new Product(1, 'Product 1', 'Kategoria 1', 'Produkt 1 (Kategoria 1', 100),
     new Product(2, 'Product 2', 'Kategoria 1', 'Produkt 2 (Kategoria 1', 100),
