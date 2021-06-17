@@ -1,0 +1,116 @@
+<div class="calculator-page">
+  <h2 class="calculator-header">Calories calculator</h2>
+  <div class="form-div">
+    <form [formGroup]="form" class="normal-form">
+      <div class="inputs">
+        <div class="controles-container basic-info">
+          <mat-form-field>
+            <input
+              formControlName="age"
+              matInput
+              placeholder="Age*"
+              type="number"
+              min="1"
+            />
+            <mat-error>This field is mandatory.</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input
+              formControlName="weight"
+              matInput
+              placeholder="Weight in kg*"
+              type="number"
+              min="1"
+            />
+            <mat-error>This field is mandatory.</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input
+              formControlName="height"
+              matInput
+              placeholder="Height in cm*"
+              type="number"
+            />
+            <mat-error>This field is mandatory.</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="controles-container additional-info">
+          <mat-form-field>
+            <mat-select formControlName="goals" placeholder="Goal*">
+              <ng-container *ngFor="let goal of goals">
+                <mat-option value="{{ goal.value }}">{{
+                  goal.viewValue
+                }}</mat-option>
+              </ng-container>
+            </mat-select>
+            <mat-error>This field is mandatory.</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-select
+              formControlName="activities"
+              placeholder="Activity level*"
+            >
+              <ng-container *ngFor="let activity of activities">
+                <mat-option value="{{ activity.value }}">{{
+                  activity.viewValue
+                }}</mat-option>
+              </ng-container>
+            </mat-select>
+            <mat-error>This field is mandatory.</mat-error>
+          </mat-form-field>
+          <div class="radio-buttons">
+            <mat-radio-group class="radio-buttons" formControlName="gender">
+              <mat-radio-button value="1">Male</mat-radio-button>
+              <mat-radio-button value="2">Female</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+      </div>
+
+      <div class="button-row">
+        <button
+          mat-raised-button
+          color="primary"
+          type="submit"
+          [disabled]="form.invalid"
+          (click)="onClick()"
+        >
+          Submit
+        </button>
+        <button mat-raised-button color="warn" (click)="onClear()">
+          Clear
+        </button>
+      </div>
+    </form>
+    <div *ngIf="calculatedValues.isCalculated" class="calculated-info">
+      <p>
+        Your bmr is <strong>{{ calculatedValues.bmrVal }}</strong> kcal
+      </p>
+      <p>
+        Your required daily calories intake is
+        <strong> {{ calculatedValues.caloriesValue }}</strong> kcal
+      </p>
+      <p>
+        Your daily protein amount is
+        <strong>{{ calculatedValues.proteinValue }}</strong> grams
+      </p>
+      <p>
+        Your daily carbohydrates amount is
+        <strong>{{ calculatedValues.carbsValue }}</strong> grams
+      </p>
+      <p>
+        Your daily fat amount is
+        <strong>{{ calculatedValues.fatValue }}</strong> grams
+      </p>
+    </div>
+  </div>
+  <ngx-charts-pie-chart
+    [results]="chartData"
+    [legend]="true"
+    [legendTitle]="'Daily macros intake'"
+    [view]="[1000, 300]"
+    [labels]="true"
+    *ngIf="calculatedValues.isCalculated"
+  >
+  </ngx-charts-pie-chart>
+</div>

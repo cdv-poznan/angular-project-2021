@@ -1,0 +1,72 @@
+.calculator-page {
+  // min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-between;
+}
+.calories-form {
+  display: flex;
+}
+.calculator-header {
+  margin-top: 20px;
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 5px;
+  color: #ffab00;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.normal-form {
+  height: 40vh;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+}
+.form-div {
+  width: 100%;
+  padding: 0 40px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.inputs {
+  display: flex;
+  justify-content: space-between;
+}
+.controles-container {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+.radio-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+mat-radio-button:first-child {
+  margin-bottom: 10px;
+}
+.button-row {
+  margin-top: 30px;
+}
+.button-row button {
+  height: 50px;
+  width: 100px;
+}
+.button-row button:first-child {
+  margin-right: 30px;
+}
+.calculated-info {
+  height: 30vh;
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #ffab00;
+  padding: 10px;
+}
+strong {
+  color: #ffab00;
+  font-size: 1.2rem;
+}
