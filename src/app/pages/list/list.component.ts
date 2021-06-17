@@ -3,6 +3,7 @@ import { CdkDragDrop, transferArrayItem, moveItemInArray } from '@angular/cdk/dr
 import { Element } from './shop-element';
 import { ProductDialogComponent, ProductDialogResult } from './elements/product-dialog/product-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-list',
@@ -10,16 +11,13 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent implements OnInit {
-  biedronka: Element[] = [
-    {title: 'buy milk', description: 'go, buy milk', important: true},
-    {title: 'create canban', description: 'read title', important: true}
-  ];
-  other: Element[] = [];
-  lidl: Element[] = [];
-  netto: Element[] = [];
-  kaufland: Element[] = [];
+  biedronka = this.store.collection('biedronka').valueChanges({idField: 'id'});
+  other = this.store.collection('other').valueChanges({idField: 'id'});
+  lidl = this.store.collection('lidl').valueChanges({idField: 'id'});
+  netto = this.store.collection('netto').valueChanges({idField: 'id'});
+  kaufland = this.store.collection('kaufland').valueChanges({idField: 'id'});
 
-  constructor(private dialog: MatDialog) { }
+  constructor(private dialog: MatDialog, private store: AngularFirestore) { }
 
   ngOnInit(): void {
   }
@@ -35,7 +33,7 @@ export class ListComponent implements OnInit {
     });
     dialogRef
       .afterClosed()
-      .subscribe((result: ProductDialogResult) => this.other.push(result.element))
+      .subscribe((result: ProductDialogResult) => this.store.collection('biedronka').add(result.element));
   }
 
   editElement(list: 'biedronka' | 'lidl' | 'netto' | 'kaufland' | 'other', element: Element): void {
@@ -47,16 +45,10 @@ export class ListComponent implements OnInit {
       }
     })
     dialogRef.afterClosed().subscribe((result: ProductDialogResult) => {
-      if (!result) {
-        return;
-      }
-      const dataList = this[list];
-      const elementIndex = dataList.indexOf(element);
-      if(result.delete) {
-        dataList.splice(elementIndex, 1)
+      if (result.delete) {
+        this.store.collection(list).doc(element.id).delete();
       } else {
-        dataList[elementIndex] = element;
-        console.log(element)
+        this.store.collection(list).doc(element.id).update(element);
       }
     })
   }
@@ -65,6 +57,14 @@ export class ListComponent implements OnInit {
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     }
+    const item = event.previousContainer.data[event.previousIndex]
+    this.store.firestore.runTransaction(() => {
+      const promise = Promise.all([
+        this.store.collection(event.previousContainer.id).doc(item.id).delete(),
+        this.store.collection(event.container.id).add(item),
+      ]);
+      return promise;
+    })
     transferArrayItem(
       event.previousContainer.data,
       event.container.data,

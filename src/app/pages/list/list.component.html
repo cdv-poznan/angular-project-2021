@@ -5,16 +5,18 @@
       cdkDropList
       id="biedronka"
       #biedronkaList="cdkDropList"
-      [cdkDropListData]="biedronka"
+      [cdkDropListData]="biedronka | async"
       [cdkDropListConnectedTo]="[lidlList, nettoList, kauflandList, otherList]"
       (cdkDropListDropped)="drop($event)"
       class="list"
     >
       <h2 class="list-element-header">Biedronka</h2>
-      <p class="empty-label" *ngIf="biedronka.length === 0">List is empty</p>
+      <p class="empty-label" *ngIf="(biedronka | async)?.length === 0">
+        List is empty
+      </p>
       <app-shop-element
         (edit)="editElement('biedronka', $event)"
-        *ngFor="let element of biedronka"
+        *ngFor="let element of biedronka | async"
         cdkDrag
         [element]="element"
       ></app-shop-element>
@@ -25,7 +27,7 @@
       cdkDropList
       id="lidl"
       #lidlList="cdkDropList"
-      [cdkDropListData]="lidl"
+      [cdkDropListData]="lidl | async"
       [cdkDropListConnectedTo]="[
         biedronkaList,
         nettoList,
@@ -36,10 +38,12 @@
       class="list"
     >
       <h2 class="list-element-header">Lidl</h2>
-      <p class="empty-label" *ngIf="lidl.length === 0">List is empty</p>
+      <p class="empty-label" *ngIf="(lidl | async)?.length === 0">
+        List is empty
+      </p>
       <app-shop-element
         (edit)="editElement('lidl', $event)"
-        *ngFor="let element of lidl"
+        *ngFor="let element of lidl | async"
         cdkDrag
         [element]="element"
       ></app-shop-element>
@@ -50,7 +54,7 @@
       cdkDropList
       id="netto"
       #nettoList="cdkDropList"
-      [cdkDropListData]="netto"
+      [cdkDropListData]="netto | async"
       [cdkDropListConnectedTo]="[
         lidlList,
         biedronkaList,
@@ -61,10 +65,12 @@
       class="list"
     >
       <h2 class="list-element-header">Netto</h2>
-      <p class="empty-label" *ngIf="netto.length === 0">List is empty</p>
+      <p class="empty-label" *ngIf="(netto | async)?.length === 0">
+        List is empty
+      </p>
       <app-shop-element
         (edit)="editElement('netto', $event)"
-        *ngFor="let element of netto"
+        *ngFor="let element of netto | async"
         cdkDrag
         [element]="element"
       ></app-shop-element>
@@ -75,16 +81,18 @@
       cdkDropList
       id="kaufland"
       #kauflandList="cdkDropList"
-      [cdkDropListData]="kaufland"
+      [cdkDropListData]="kaufland | async"
       [cdkDropListConnectedTo]="[lidlList, nettoList, biedronkaList, otherList]"
       (cdkDropListDropped)="drop($event)"
       class="list"
     >
       <h2 class="list-element-header">Kaufland</h2>
-      <p class="empty-label" *ngIf="kaufland.length === 0">List is empty</p>
+      <p class="empty-label" *ngIf="(kaufland | async)?.length === 0">
+        List is empty
+      </p>
       <app-shop-element
         (edit)="editElement('kaufland', $event)"
-        *ngFor="let element of kaufland"
+        *ngFor="let element of kaufland | async"
         cdkDrag
         [element]="element"
       ></app-shop-element>
@@ -95,7 +103,7 @@
       cdkDropList
       id="other"
       #otherList="cdkDropList"
-      [cdkDropListData]="other"
+      [cdkDropListData]="other | async"
       [cdkDropListConnectedTo]="[
         lidlList,
         nettoList,
@@ -106,10 +114,12 @@
       class="list"
     >
       <h2 class="list-element-header">Other</h2>
-      <p class="empty-label" *ngIf="other.length === 0">List is empty</p>
+      <p class="empty-label" *ngIf="(other | async)?.length === 0">
+        List is empty
+      </p>
       <app-shop-element
         (edit)="editElement('other', $event)"
-        *ngFor="let element of other"
+        *ngFor="let element of other | async"
         cdkDrag
         [element]="element"
       ></app-shop-element>
