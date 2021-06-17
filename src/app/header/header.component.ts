@@ -12,8 +12,8 @@ export class HeaderComponent implements OnInit {
       route: ""
     },
     {
-      name: "Recipies",
-      route: "/recipies"
+      name: "Calories calculator",
+      route: "/calculator"
     },
     {
       name: "List",
