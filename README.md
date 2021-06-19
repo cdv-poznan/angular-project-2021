@@ -12,7 +12,9 @@ The website consists of 4 subpages
 There is also a page for login, register and logout. They are created with firebase authentication. You can use the following credentials to log into the page and test it - email: test@test.pl and password: test123.
 The page is responsive.
 
-# Trchnologies used
+## Website is available under: https://baguetti-iqn9wn03n-joaskr.vercel.app
+
+## Trchnologies used
 
 <ul>
     <li>Angular</li>
