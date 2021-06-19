@@ -1,3 +1,4 @@
+//Todo: create individual tasks collections for each logged user
 import { Component, OnInit } from '@angular/core';
 import { CdkDragDrop, transferArrayItem, moveItemInArray } from '@angular/cdk/drag-drop';
 import { Element } from './shop-element';
