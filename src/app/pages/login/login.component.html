@@ -1,0 +1,20 @@
+<div>
+  <h2>Login</h2>
+  <form (ngSubmit)="onLogin()">
+    <input
+      type="email"
+      placeholder="Email"
+      id="emailLogin"
+      [(ngModel)]="email"
+      name="email"
+    />
+    <input
+      type="password"
+      placeholder="Password"
+      id="passwordLogin"
+      [(ngModel)]="password"
+      name="password"
+    />
+    <button mat-flat-button type="submit">Login</button>
+  </form>
+</div>
