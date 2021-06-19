@@ -1,133 +1,146 @@
-<h2 class="list-header">Shopping list</h2>
-<div class="lists-container">
-  <div class="list-container">
-    <mat-card
-      cdkDropList
-      id="biedronka"
-      #biedronkaList="cdkDropList"
-      [cdkDropListData]="biedronka | async"
-      [cdkDropListConnectedTo]="[lidlList, nettoList, kauflandList, otherList]"
-      (cdkDropListDropped)="drop($event)"
-      class="list"
-    >
-      <h2 class="list-element-header">Biedronka</h2>
-      <p class="empty-label" *ngIf="(biedronka | async)?.length === 0">
-        List is empty
-      </p>
-      <app-shop-element
-        (edit)="editElement('biedronka', $event)"
-        *ngFor="let element of biedronka | async"
-        cdkDrag
-        [element]="element"
-      ></app-shop-element>
-    </mat-card>
+<div *ngIf="visible">
+  <h2 class="list-header">Shopping list</h2>
+  <div class="lists-container">
+    <div class="list-container">
+      <mat-card
+        cdkDropList
+        id="biedronka"
+        #biedronkaList="cdkDropList"
+        [cdkDropListData]="biedronka | async"
+        [cdkDropListConnectedTo]="[
+          lidlList,
+          nettoList,
+          kauflandList,
+          otherList
+        ]"
+        (cdkDropListDropped)="drop($event)"
+        class="list"
+      >
+        <h2 class="list-element-header">Biedronka</h2>
+        <p class="empty-label" *ngIf="(biedronka | async)?.length === 0">
+          List is empty
+        </p>
+        <app-shop-element
+          (edit)="editElement('biedronka', $event)"
+          *ngFor="let element of biedronka | async"
+          cdkDrag
+          [element]="element"
+        ></app-shop-element>
+      </mat-card>
+    </div>
+    <div class="list-container">
+      <mat-card
+        cdkDropList
+        id="lidl"
+        #lidlList="cdkDropList"
+        [cdkDropListData]="lidl | async"
+        [cdkDropListConnectedTo]="[
+          biedronkaList,
+          nettoList,
+          kauflandList,
+          otherList
+        ]"
+        (cdkDropListDropped)="drop($event)"
+        class="list"
+      >
+        <h2 class="list-element-header">Lidl</h2>
+        <p class="empty-label" *ngIf="(lidl | async)?.length === 0">
+          List is empty
+        </p>
+        <app-shop-element
+          (edit)="editElement('lidl', $event)"
+          *ngFor="let element of lidl | async"
+          cdkDrag
+          [element]="element"
+        ></app-shop-element>
+      </mat-card>
+    </div>
+    <div class="list-container">
+      <mat-card
+        cdkDropList
+        id="netto"
+        #nettoList="cdkDropList"
+        [cdkDropListData]="netto | async"
+        [cdkDropListConnectedTo]="[
+          lidlList,
+          biedronkaList,
+          kauflandList,
+          otherList
+        ]"
+        (cdkDropListDropped)="drop($event)"
+        class="list"
+      >
+        <h2 class="list-element-header">Netto</h2>
+        <p class="empty-label" *ngIf="(netto | async)?.length === 0">
+          List is empty
+        </p>
+        <app-shop-element
+          (edit)="editElement('netto', $event)"
+          *ngFor="let element of netto | async"
+          cdkDrag
+          [element]="element"
+        ></app-shop-element>
+      </mat-card>
+    </div>
+    <div class="list-container">
+      <mat-card
+        cdkDropList
+        id="kaufland"
+        #kauflandList="cdkDropList"
+        [cdkDropListData]="kaufland | async"
+        [cdkDropListConnectedTo]="[
+          lidlList,
+          nettoList,
+          biedronkaList,
+          otherList
+        ]"
+        (cdkDropListDropped)="drop($event)"
+        class="list"
+      >
+        <h2 class="list-element-header">Kaufland</h2>
+        <p class="empty-label" *ngIf="(kaufland | async)?.length === 0">
+          List is empty
+        </p>
+        <app-shop-element
+          (edit)="editElement('kaufland', $event)"
+          *ngFor="let element of kaufland | async"
+          cdkDrag
+          [element]="element"
+        ></app-shop-element>
+      </mat-card>
+    </div>
+    <div class="list-container">
+      <mat-card
+        cdkDropList
+        id="other"
+        #otherList="cdkDropList"
+        [cdkDropListData]="other | async"
+        [cdkDropListConnectedTo]="[
+          lidlList,
+          nettoList,
+          kauflandList,
+          biedronkaList
+        ]"
+        (cdkDropListDropped)="drop($event)"
+        class="list"
+      >
+        <h2 class="list-element-header">Other</h2>
+        <p class="empty-label" *ngIf="(other | async)?.length === 0">
+          List is empty
+        </p>
+        <app-shop-element
+          (edit)="editElement('other', $event)"
+          *ngFor="let element of other | async"
+          cdkDrag
+          [element]="element"
+        ></app-shop-element>
+      </mat-card>
+    </div>
   </div>
-  <div class="list-container">
-    <mat-card
-      cdkDropList
-      id="lidl"
-      #lidlList="cdkDropList"
-      [cdkDropListData]="lidl | async"
-      [cdkDropListConnectedTo]="[
-        biedronkaList,
-        nettoList,
-        kauflandList,
-        otherList
-      ]"
-      (cdkDropListDropped)="drop($event)"
-      class="list"
-    >
-      <h2 class="list-element-header">Lidl</h2>
-      <p class="empty-label" *ngIf="(lidl | async)?.length === 0">
-        List is empty
-      </p>
-      <app-shop-element
-        (edit)="editElement('lidl', $event)"
-        *ngFor="let element of lidl | async"
-        cdkDrag
-        [element]="element"
-      ></app-shop-element>
-    </mat-card>
-  </div>
-  <div class="list-container">
-    <mat-card
-      cdkDropList
-      id="netto"
-      #nettoList="cdkDropList"
-      [cdkDropListData]="netto | async"
-      [cdkDropListConnectedTo]="[
-        lidlList,
-        biedronkaList,
-        kauflandList,
-        otherList
-      ]"
-      (cdkDropListDropped)="drop($event)"
-      class="list"
-    >
-      <h2 class="list-element-header">Netto</h2>
-      <p class="empty-label" *ngIf="(netto | async)?.length === 0">
-        List is empty
-      </p>
-      <app-shop-element
-        (edit)="editElement('netto', $event)"
-        *ngFor="let element of netto | async"
-        cdkDrag
-        [element]="element"
-      ></app-shop-element>
-    </mat-card>
-  </div>
-  <div class="list-container">
-    <mat-card
-      cdkDropList
-      id="kaufland"
-      #kauflandList="cdkDropList"
-      [cdkDropListData]="kaufland | async"
-      [cdkDropListConnectedTo]="[lidlList, nettoList, biedronkaList, otherList]"
-      (cdkDropListDropped)="drop($event)"
-      class="list"
-    >
-      <h2 class="list-element-header">Kaufland</h2>
-      <p class="empty-label" *ngIf="(kaufland | async)?.length === 0">
-        List is empty
-      </p>
-      <app-shop-element
-        (edit)="editElement('kaufland', $event)"
-        *ngFor="let element of kaufland | async"
-        cdkDrag
-        [element]="element"
-      ></app-shop-element>
-    </mat-card>
-  </div>
-  <div class="list-container">
-    <mat-card
-      cdkDropList
-      id="other"
-      #otherList="cdkDropList"
-      [cdkDropListData]="other | async"
-      [cdkDropListConnectedTo]="[
-        lidlList,
-        nettoList,
-        kauflandList,
-        biedronkaList
-      ]"
-      (cdkDropListDropped)="drop($event)"
-      class="list"
-    >
-      <h2 class="list-element-header">Other</h2>
-      <p class="empty-label" *ngIf="(other | async)?.length === 0">
-        List is empty
-      </p>
-      <app-shop-element
-        (edit)="editElement('other', $event)"
-        *ngFor="let element of other | async"
-        cdkDrag
-        [element]="element"
-      ></app-shop-element>
-    </mat-card>
+  <div class="button-div">
+    <button mat-fab (click)="newProduct()">
+      <mat-icon>add</mat-icon>
+    </button>
   </div>
 </div>
-<div class="button-div">
-  <button mat-fab (click)="newProduct()">
-    <mat-icon>add</mat-icon>
-  </button>
-</div>
+<app-login *ngIf="!visible"></app-login>

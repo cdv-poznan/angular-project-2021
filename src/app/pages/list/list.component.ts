@@ -4,6 +4,7 @@ import { Element } from './shop-element';
 import { ProductDialogComponent, ProductDialogResult } from './elements/product-dialog/product-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
 import { AngularFirestore } from '@angular/fire/firestore';
+import {FirebaseService} from '../../services/firebase.service'
 
 @Component({
   selector: 'app-list',
@@ -16,10 +17,15 @@ export class ListComponent implements OnInit {
   lidl = this.store.collection('lidl').valueChanges({idField: 'id'});
   netto = this.store.collection('netto').valueChanges({idField: 'id'});
   kaufland = this.store.collection('kaufland').valueChanges({idField: 'id'});
-
-  constructor(private dialog: MatDialog, private store: AngularFirestore) { }
+  visible = false;
+  constructor(private dialog: MatDialog, private store: AngularFirestore, public firebaseService: FirebaseService) { }
 
   ngOnInit(): void {
+    if(this.firebaseService.isLoggedIn === true) {
+      this.visible = true
+    } else {
+      this.visible = false
+    }
   }
 
   newProduct(): void {
