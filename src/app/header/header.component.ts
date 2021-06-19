@@ -19,9 +19,14 @@ export class HeaderComponent implements OnInit {
       route: "/calculator"
     },
     {
+      name: "Recipies",
+      route: "/recipies"
+    },
+    {
       name: "List",
       route: "/list"
-    }
+    },
+    
   ];
   activeLink = this.links[0];
   constructor(public firebaseService: FirebaseService) { 
