@@ -41,7 +41,10 @@ import { CalculatorComponent } from './pages/calculator/calculator.component';
 import { CaloriesFormComponent } from './pages/calculator/calories-form/calories-form.component';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireModule } from '@angular/fire';
-import { environment } from '../environments/environment'
+import { environment } from '../environments/environment';
+import { LoginComponent } from './pages/login/login.component';
+import { RegisterComponent } from './pages/register/register.component';
+import { LogoutComponent } from './pages/logout/logout.component'
 
 
 
@@ -49,10 +52,13 @@ const appRoues: Routes = [
   {path: '', component: HomeComponent},
   {path: 'calculator', component: CalculatorComponent},
   {path: 'list', component: ListComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'register', component: RegisterComponent},
+  {path: 'logout', component: LogoutComponent},
 ]
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, HomeComponent, ListComponent, ButtonComponent, BannerComponent, SecPicLeftComponent, SecPicRightComponent, ColumnsComponent, FormSectionComponent, ShopElementComponent, ProductDialogComponent, CalculatorComponent, CaloriesFormComponent],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, HomeComponent, ListComponent, ButtonComponent, BannerComponent, SecPicLeftComponent, SecPicRightComponent, ColumnsComponent, FormSectionComponent, ShopElementComponent, ProductDialogComponent, CalculatorComponent, CaloriesFormComponent, LoginComponent, RegisterComponent, LogoutComponent],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, MatToolbarModule, MatTabsModule, MatAutocompleteModule, DragDropModule, MatSelectModule, MatFormFieldModule, MatInputModule, MatGridListModule, MatButtonModule, MatRadioModule, ReactiveFormsModule, HttpClientModule, FormsModule, MatIconModule, MatCardModule, MatDialogModule, MatCheckboxModule, AngularFireModule.initializeApp(environment.firebase), AngularFirestoreModule, NgxChartsModule, RouterModule.forRoot(appRoues, {enableTracing: true})],
   providers: [],
   bootstrap: [AppComponent],
