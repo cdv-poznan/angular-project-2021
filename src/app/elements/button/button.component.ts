@@ -9,6 +9,7 @@ export class ButtonComponent implements OnInit {
   @Input() buttonText: string;
   @Input() buttonColor: string;
   @Input() class: string;
+  @Input() link: string;
 
   constructor() { }
 
