@@ -10,10 +10,8 @@ export class ProductRepository {
   constructor(private dataSource: StaticDataSource) {
     dataSource.getProducts().subscribe(data => {
       this.products = data;
-      // tslint:disable-next-line:triple-equals
       this.categories = data
         .map(p => p.category)
-        // tslint:disable-next-line:triple-equals
         .filter((c, index, array) => array.indexOf(c) === index)
         .sort();
     });
