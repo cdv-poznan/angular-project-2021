@@ -14,7 +14,7 @@
       mat-card-image
       class="recipe-image"
       src="{{ recpie.imageSrc }}"
-      alt="Photo of a Shiba Inu"
+      alt="Photo of a dish"
     />
     <mat-card-content>
       <p>
@@ -22,4 +22,7 @@
       </p>
     </mat-card-content>
   </mat-card>
+</div>
+<div *ngIf="recipiesArray.length === 0" class="recipeGrid">
+  <p>Recipies are loading</p>
 </div>

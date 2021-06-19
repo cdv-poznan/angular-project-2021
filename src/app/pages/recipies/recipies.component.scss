@@ -36,3 +36,18 @@
 .recipe-image {
   height: 250px;
 }
+@media only screen and (max-width: 1000px) {
+  .recipe-card {
+    width: 25vw;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .recipe-card {
+    width: 40vw;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .recipe-card {
+    width: 100vw;
+  }
+}
