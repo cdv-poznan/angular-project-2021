@@ -1,0 +1,38 @@
+.recipies-header {
+  margin-top: 20px;
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 5px;
+  color: #ffab00;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.recipies-subheader {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.recipeGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.recipe-card {
+  width: 20vw;
+  height: auto;
+  font-size: 1rem;
+  word-wrap: break-word;
+  margin-bottom: 30px;
+  text-align: justify;
+}
+.recipe-title {
+  font-size: 1.3rem;
+  color: #ffab00;
+  font-weight: 300;
+  text-align: center;
+}
+.recipe-image {
+  height: 250px;
+}
