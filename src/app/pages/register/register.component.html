@@ -1,0 +1,21 @@
+<div>
+  <h2>Register</h2>
+  <form (ngSubmit)="onRegister()">
+    <input
+      type="email"
+      placeholder="Email"
+      id="emailRegister"
+      [(ngModel)]="email"
+      name="email"
+    />
+    <input
+      type="password"
+      placeholder="Password"
+      id="passwordRegister"
+      [(ngModel)]="password"
+      name="password"
+      minlength="6"
+    />
+    <button mat-flat-button type="submit">Register</button>
+  </form>
+</div>
