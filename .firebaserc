@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "baguetti-a0786": {
+      "hosting": {
+        "angular-project": [
+          "baguetti-a0786"
+        ]
+      }
+    }
+  }
+}
