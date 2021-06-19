@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {FirebaseService} from '../services/firebase.service'
+import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -6,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  visibleLoginButton:boolean
   links = [
     {
       name: "Home",
@@ -21,10 +24,18 @@ export class HeaderComponent implements OnInit {
     }
   ];
   activeLink = this.links[0];
-
-  constructor() { }
+  constructor(public firebaseService: FirebaseService) { 
+    setInterval(() => {
+      if (this.firebaseService.isLoggedIn) {
+        this.visibleLoginButton =  false
+      } else {
+        this.visibleLoginButton =  true
+      }
+    }, 1000)
+   }
 
   ngOnInit(): void {
+    
   }
 
 }

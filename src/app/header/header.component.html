@@ -13,14 +13,25 @@
   </nav>
   <div class="buttons">
     <app-button
+      *ngIf="visibleLoginButton"
       buttonText="Login"
       buttonColor="primary"
-      class="login-btn"
+      class="login-btn white-text"
+      link="/login"
     ></app-button>
     <app-button
+      *ngIf="visibleLoginButton"
       buttonText="Register"
       buttonColor="basic"
       class="register-btn"
+      link="/register"
+    ></app-button>
+    <app-button
+      *ngIf="!visibleLoginButton"
+      buttonText="Logout"
+      buttonColor="warn"
+      class="logout-btn white-text"
+      link="/logout"
     ></app-button>
   </div>
 </mat-toolbar>
