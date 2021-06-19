@@ -17,71 +17,8 @@ interface Goal {
   styleUrls: ['./calories-form.component.scss']
 })
 export class CaloriesFormComponent implements OnInit {
-//   age: number;
-//   weight: number;
-//   height: number;
-//   usersActivity: string;
-//   bmrValue: number;
-//   caloriesValue: number;
-//   activities: Activity[] = [
-//     {value: 1.2, viewValue: 'Little to no excercises'},
-//     {value: 1.375, viewValue: 'Light exercise (once a week)'},
-//     {value: 1.55, viewValue: 'Moderate exercise (twice a week)'},
-//     {value: 1.725, viewValue: 'Heavy exercise (3–5 days per week)'},
-//     {value: 1.9, viewValue: 'Very heavy exercise (more than 5 days a week)'},
-//   ];
-//   usersGoal: string;
-//   goals: Goal[] = [
-//     {value: 500, viewValue: 'Lose weight'},
-//     {value: 0, viewValue: 'Maintain weight'},
-//     {value: -500, viewValue: 'Lose weight'}
-//   ];
-//   genders: string[] = ['male', 'female'];
-//   usersGender: string;
-//   constructor() { }
-
   ngOnInit(): void {
 }
-//   bmr = function() {
-//       let bmrVal = this.weight * 10 + this.height * 6.25 + this.age * 5;
-//       if(this.usersGender === 'male') {
-//         return bmrVal + 5;
-//       } else if (this.usersGender === 'female') {
-//         return bmrVal - 161;
-//       }
-//       this.bmrValue = bmrVal;
-//       return this.bmrValue;
-//     }
-//   cals = function(bmrValue) {
-//     if(bmrValue !== NaN && this.usersActivity.value !== null && this.usersGoal !== null) {
-//       let caloriesValue = bmrValue * this.usersActivity.value - this.usersGoal.value;
-//       console.log(caloriesValue)
-//       return caloriesValue
-//     } else {
-//       return;
-//     }
-//   }
-//   proteinAmount = function(caloriesValue){
-//     if(caloriesValue !== NaN) {
-//       return  caloriesValue * .55
-//     } else {
-//       return;
-//     }
-//   }
-//   carbsAmount = function(caloriesValue){
-//     if(caloriesValue !== NaN) {
-//       return caloriesValue * .25
-//     } else {
-//       return;
-//     }
-//   }
-//   fatAmount = function(caloriesValue){
-//     if(caloriesValue !== NaN) {
-//       return caloriesValue * .2
-//     } else {
-//       return;
-//     }
-//   }
   form: FormGroup = new FormGroup({
     age: new FormControl('', Validators.required),
     weight: new FormControl('', Validators.required),
