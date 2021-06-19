@@ -1,0 +1,19 @@
+.logout-header {
+  margin-top: 20px;
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 5px;
+  color: #ffab00;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.logout-bts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+.logout-bts button:first-child {
+  margin-right: 30px;
+}

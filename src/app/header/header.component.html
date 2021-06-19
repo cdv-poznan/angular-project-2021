@@ -1,0 +1,37 @@
+<mat-toolbar>
+  <h5 class="logo">Baguetti</h5>
+  <nav mat-tab-nav-bar>
+    <a
+      mat-tab-link
+      *ngFor="let link of links"
+      [routerLink]="link.route"
+      (click)="activeLink = link.route"
+      [active]="activeLink == link.route"
+    >
+      {{ link.name }}
+    </a>
+  </nav>
+  <div class="buttons">
+    <app-button
+      *ngIf="visibleLoginButton"
+      buttonText="Login"
+      buttonColor="primary"
+      class="login-btn white-text"
+      link="/login"
+    ></app-button>
+    <app-button
+      *ngIf="visibleLoginButton"
+      buttonText="Register"
+      buttonColor="basic"
+      class="register-btn"
+      link="/register"
+    ></app-button>
+    <app-button
+      *ngIf="!visibleLoginButton"
+      buttonText="Logout"
+      buttonColor="warn"
+      class="logout-btn white-text"
+      link="/logout"
+    ></app-button>
+  </div>
+</mat-toolbar>

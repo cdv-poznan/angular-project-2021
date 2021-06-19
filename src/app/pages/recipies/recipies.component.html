@@ -1,0 +1,28 @@
+<h2 class="recipies-header">Take a look at our recipies</h2>
+<p class="recipies-subheader">
+  Take a look at recipies offered by our specialists. Contact us to get perfect
+  recipies for your needs
+</p>
+<div *ngIf="recipiesArray.length > 0" class="recipeGrid">
+  <mat-card class="recipe-card" *ngFor="let recpie of recipiesArray">
+    <mat-card-header>
+      <mat-card-title class="recipe-title">{{
+        recpie.displayName
+      }}</mat-card-title>
+    </mat-card-header>
+    <img
+      mat-card-image
+      class="recipe-image"
+      src="{{ recpie.imageSrc }}"
+      alt="Photo of a dish"
+    />
+    <mat-card-content>
+      <p>
+        {{ recpie.content }}
+      </p>
+    </mat-card-content>
+  </mat-card>
+</div>
+<div *ngIf="recipiesArray.length === 0" class="recipeGrid">
+  <p>Recipies are loading</p>
+</div>

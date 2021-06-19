@@ -1,45 +1,25 @@
-# Angular Project
+# Project description
 
-Starter wygenerowany przez [Angular CLI](https://github.com/angular/angular-cli) w wersji 11.2.10.
+Baguetti is a fictional company for people who want to lose weight.
+The website consists of 4 subpages
 
-## Instalacja zależności
+<ul>
+    <li>home page, on which user can read more about the company, </li>
+    <li>calories calculator - where the users can check their bmr and daily macros rates. Results are displayed on a list and on a chart generated with ngx-chart,</li>
+    <li>recipies - the page shows sample dishes offered by the company. The recipies, descriptions and images are downloaded from Yummly API,</li>
+    <li>shopping list - the page is only available for logged in users. A user can add tasks and drag and drop them between the categories. Double click on a task to edit or delete it. Tasks are added to a firebase database</li>
+  </ul>
+There is also a page for login, register and logout. They are created with firebase authentication. You can use the following credentials to log into the page and test it - <b>email: test@test.pl and password: test123</b>.
+The page is responsive.
 
-```shell
-npm install
-```
+## Website is available under: https://baguetti-iqn9wn03n-joaskr.vercel.app
 
-## Serwer deweloperski
+## Trchnologies used
 
-```shell
-npm start
-```
-
-lub z zainstalowanym globalnie Angular CLI (`@angular/cli`)
-
-```shell
-ng serve
-```
-
-> Po uruchomieniu serwera aplikacja jest dostępna pod adresem [`http://localhost:4200/`](http://localhost:4200/).
-
-## Generowanie kodu
-
-```shell
-ng generate directive|pipe|service|class|guard|interface|enum|module
-```
-
-## Budowanie aplikacji
-
-```shell
-npm run build
-```
-
-lub z zainstalowanym globalnie Angular CLI (`@angular/cli`)
-
-```shell
-ng build --prod
-```
-
-### Wyłączenia sprawdzania znaku końca linii dla systemu Windows
-
-W pliku `tslint.json` należy ustawić flagę `eofline` na wartość `false`
+<ul>
+    <li>Angular</li>
+    <li>Angular material</li>
+    <li>Firebase</li>
+    <li>Yummly API (https://rapidapi.com/apidojo/api/yummly2/)</li>
+    <li>Ngx-chart</li>
+</ul>

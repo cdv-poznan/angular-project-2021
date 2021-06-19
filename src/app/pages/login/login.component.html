@@ -1,0 +1,27 @@
+<div>
+  <h2 class="login-header">Login</h2>
+  <form (ngSubmit)="onLogin()" class="login-form">
+    <input
+      type="email"
+      placeholder="Email"
+      id="emailLogin"
+      [(ngModel)]="email"
+      name="email"
+    />
+    <input
+      type="password"
+      placeholder="Password"
+      id="passwordLogin"
+      [(ngModel)]="password"
+      name="password"
+    />
+    <div class="buttons">
+      <button class="login-btn" mat-flat-button color="primary" type="submit">
+        Login
+      </button>
+      <button class="login-btn" mat-stroked-button color="basic">
+        <a class="router-link" routerLink="/register">Register</a>
+      </button>
+    </div>
+  </form>
+</div>

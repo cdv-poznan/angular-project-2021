@@ -1,0 +1,29 @@
+<div class="dialog-form-div">
+  <mat-form-field>
+    <mat-label>Title</mat-label>
+    <input matInput cdkFocusInitial [(ngModel)]="data.element.title" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Description</mat-label>
+    <textarea matInput [(ngModel)]="data.element.description"></textarea>
+  </mat-form-field>
+  <mat-checkbox [(ngModel)]="data.element.important">Important</mat-checkbox>
+  <div mat-dialog-actions>
+    <button
+      mat-stroked-button
+      color="primary"
+      [mat-dialog-close]="{ element: data.element }"
+    >
+      ok
+    </button>
+    <button mat-stroked-button (click)="cancel()">cancel</button>
+    <button
+      *ngIf="data.enableDelete"
+      mat-stroked-button
+      color="warn"
+      [mat-dialog-close]="{ element: data.element, delete: true }"
+    >
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+</div>

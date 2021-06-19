@@ -1,0 +1,96 @@
+<div class="form-component">
+  <div class="form-container">
+    <p class="form-text">
+      Do you need individual consultation with our specialist? Please fill out
+      the form below, we will contact you as soon as possible.
+    </p>
+    <form (ngSumbit)="sendForm()">
+      <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input
+          matInput
+          name="name"
+          type="text"
+          [(ngModel)]="name"
+          minlength="3"
+          required
+          #nameInput="ngModel"
+        />
+        <mat-error *ngIf="nameInput.invalid && nameInput.dirty"
+          >Name is required and needs to be at least 3 characters
+          long.</mat-error
+        >
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input
+          matInput
+          type="email"
+          name="email"
+          placeholder="pat@example.com"
+          [(ngModel)]="email"
+          required
+          email
+          #emailInput="ngModel"
+        />
+        <mat-error *ngIf="emailInput.invalid"
+          >Please use correct email.</mat-error
+        >
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Age</mat-label>
+        <input
+          matInput
+          type="number"
+          name="age"
+          [(ngModel)]="age"
+          #ageInput="ngModel"
+          required
+          min="18"
+        />
+        <mat-error *ngIf="ageInput.invalid">Please use correct age.</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Weight (in kg)</mat-label>
+        <input
+          matInput
+          type="number"
+          name="weight"
+          [(ngModel)]="weight"
+          required
+          min="20"
+          #weightInput="ngModel"
+        />
+        <mat-error *ngIf="weightInput.invalid"
+          >Please use correct weight in kg.</mat-error
+        >
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>What is your goal</mat-label>
+        <input
+          matInput
+          name="goal"
+          [(ngModel)]="goal"
+          #goalInput="ngModel"
+          minlength="10"
+          required
+        />
+        <mat-error *ngIf="nameInput.invalid && nameInput.dirty"
+          >Goal is required and needs to be at least 10 characters
+          long.</mat-error
+        >
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Anything else?</mat-label>
+        <textarea
+          matInput
+          name="message"
+          [(ngModel)]="message"
+          #messageInput="ngModel"
+        ></textarea>
+      </mat-form-field>
+      <button mat-flat-button color="primary" type="submit">Send</button>
+    </form>
+  </div>
+  <div class="right-form-pic-container"></div>
+</div>

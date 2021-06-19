@@ -1,0 +1,11 @@
+<mat-card
+  [ngClass]="{ important: element.important }"
+  class="item"
+  *ngIf="element"
+  (dblclick)="edit.emit(element)"
+>
+  <h2 class="list-element-title">{{ element.title }}</h2>
+  <p class="list-element-description">
+    {{ element.description }}
+  </p>
+</mat-card>
