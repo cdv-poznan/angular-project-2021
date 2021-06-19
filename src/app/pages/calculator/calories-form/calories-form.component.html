@@ -1,6 +1,6 @@
 <div class="calculator-page">
   <h2 class="calculator-header">Calories calculator</h2>
-  <div class="form-div">
+  <div class="form-div" #formDiv>
     <form [formGroup]="form" class="normal-form">
       <div class="inputs">
         <div class="controles-container basic-info">
@@ -106,9 +106,9 @@
   </div>
   <ngx-charts-pie-chart
     [results]="chartData"
-    [legend]="true"
+    [legend]="false"
     [legendTitle]="'Daily macros intake'"
-    [view]="[1000, 300]"
+    [view]="[formDiv.offsetWidth, 400]"
     [labels]="true"
     *ngIf="calculatedValues.isCalculated"
   >

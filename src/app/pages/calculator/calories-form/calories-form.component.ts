@@ -18,7 +18,7 @@ interface Goal {
 })
 export class CaloriesFormComponent implements OnInit {
   ngOnInit(): void {
-}
+  }
   form: FormGroup = new FormGroup({
     age: new FormControl('', Validators.required),
     weight: new FormControl('', Validators.required),
@@ -38,7 +38,7 @@ export class CaloriesFormComponent implements OnInit {
       activities: 0,
     });
   }
-
+  
   goals = [
     {value: 500, viewValue: 'Lose weight'},
     {value: 0, viewValue: 'Maintain weight'},

@@ -1,8 +1,6 @@
 .calculator-page {
-  // min-height: 80vh;
   display: flex;
   flex-direction: column;
-  // justify-content: space-between;
 }
 .calories-form {
   display: flex;
@@ -69,4 +67,30 @@ mat-radio-button:first-child {
 strong {
   color: #ffab00;
   font-size: 1.2rem;
+}
+@media only screen and (max-width: 1000px) {
+  .form-div {
+    flex-direction: column;
+    padding: 0 10px;
+  }
+  .normal-form {
+    width: 100vw;
+    height: auto;
+    margin-bottom: 30px;
+  }
+  .controles-container {
+    width: 45%;
+  }
+  .calculated-info {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .inputs {
+    flex-direction: column;
+  }
+  .controles-container {
+    width: 100%;
+  }
 }
