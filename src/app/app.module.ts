@@ -44,7 +44,8 @@ import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
-import { LogoutComponent } from './pages/logout/logout.component'
+import { LogoutComponent } from './pages/logout/logout.component';
+import { RecipiesComponent } from './pages/recipies/recipies.component'
 
 
 
@@ -55,10 +56,11 @@ const appRoues: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'logout', component: LogoutComponent},
+  {path: 'recipies', component: RecipiesComponent},
 ]
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, HomeComponent, ListComponent, ButtonComponent, BannerComponent, SecPicLeftComponent, SecPicRightComponent, ColumnsComponent, FormSectionComponent, ShopElementComponent, ProductDialogComponent, CalculatorComponent, CaloriesFormComponent, LoginComponent, RegisterComponent, LogoutComponent],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, HomeComponent, ListComponent, ButtonComponent, BannerComponent, SecPicLeftComponent, SecPicRightComponent, ColumnsComponent, FormSectionComponent, ShopElementComponent, ProductDialogComponent, CalculatorComponent, CaloriesFormComponent, LoginComponent, RegisterComponent, LogoutComponent, RecipiesComponent],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, MatToolbarModule, MatTabsModule, MatAutocompleteModule, DragDropModule, MatSelectModule, MatFormFieldModule, MatInputModule, MatGridListModule, MatButtonModule, MatRadioModule, ReactiveFormsModule, HttpClientModule, FormsModule, MatIconModule, MatCardModule, MatDialogModule, MatCheckboxModule, AngularFireModule.initializeApp(environment.firebase), AngularFirestoreModule, NgxChartsModule, RouterModule.forRoot(appRoues, {enableTracing: true})],
   providers: [],
   bootstrap: [AppComponent],
