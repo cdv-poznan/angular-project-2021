@@ -1,6 +1,6 @@
 <div>
-  <h2>Login</h2>
-  <form (ngSubmit)="onLogin()">
+  <h2 class="login-header">Login</h2>
+  <form (ngSubmit)="onLogin()" class="login-form">
     <input
       type="email"
       placeholder="Email"
@@ -15,6 +15,13 @@
       [(ngModel)]="password"
       name="password"
     />
-    <button mat-flat-button type="submit">Login</button>
+    <div class="buttons">
+      <button class="login-btn" mat-flat-button color="primary" type="submit">
+        Login
+      </button>
+      <button class="login-btn" mat-stroked-button color="basic">
+        <a class="router-link" routerLink="/register">Register</a>
+      </button>
+    </div>
   </form>
 </div>
