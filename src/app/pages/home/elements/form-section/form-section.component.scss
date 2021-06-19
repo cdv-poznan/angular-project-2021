@@ -26,3 +26,15 @@ mat-form-field {
   font-weight: 300;
   text-align: justify;
 }
+@media only screen and (max-width: 650px) {
+  .form-component {
+    flex-direction: column-reverse;
+    padding-right: 20px;
+  }
+  .right-form-pic-container {
+    display: none;
+  }
+  .form-container {
+    width: 100%;
+  }
+}

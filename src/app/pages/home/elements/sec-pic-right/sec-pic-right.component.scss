@@ -37,3 +37,15 @@
   text-align: justify;
   line-height: 1.3;
 }
+@media only screen and (max-width: 650px) {
+  .sec-pic-right-container {
+    flex-direction: column-reverse;
+  }
+  .right-text-container {
+    width: 100%;
+  }
+  .right-pic-container {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+}

@@ -1,5 +1,10 @@
 <div class="columns-container">
-  <mat-grid-list cols="3" rowHeight="2:1" gutterSize="30px">
+  <mat-grid-list
+    [cols]="breakpoint"
+    rowHeight="2:1"
+    [gutterSize]="gutter"
+    (window:resize)="onResize($event)"
+  >
     <mat-grid-tile>
       <div class="column">
         <div class="column-icon">
