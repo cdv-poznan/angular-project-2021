@@ -26,9 +26,7 @@ $maroon: #561f37;
 
 body {
   min-width: 180px;
-  align-items: center;
   text-align: center;
-  justify-content: center;
   display: block;
   background-color: $green;
 }
@@ -42,6 +40,7 @@ button {
   height: 120px;
   width: 120px;
   border-radius: 50%;
+  border-style: none;
   background-color: #fff;
   box-shadow: 2px 2px 8px $maroon;
   font-weight: bold;
