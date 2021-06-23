@@ -8,7 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { GameComponent } from './game/game.component';
 import { CardComponent } from './game/card/card.component';
 import { HomeButtonComponent } from './home-button/home-button.component';
-import { HitButtonComponent } from './hit-button/hit-button.component';
+import { HitButtonComponent } from './game/hit-button/hit-button.component';
 import { StandButtonComponent } from './game/stand-button/stand-button.component';
 import { StartButtonComponent } from './home/start-button/start-button.component';
 import { DialogComponent } from './dialog/dialog.component';
