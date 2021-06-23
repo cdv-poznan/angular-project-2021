@@ -8,17 +8,17 @@ const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
-    data: { animation: 'Home' },
+    data: { animation: 'isLeft' },
   },
   {
     path: 'game',
     component: GameComponent,
-    data: { animation: 'Game' },
+    data: { animation: 'isRight' },
   },
   {
     path: 'bye',
     component: ByeComponent,
-    data: { animation: 'Bye' },
+    data: { animation: 'isLeft' },
   },
 ];
 

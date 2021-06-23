@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { moveLeft } from './animation';
+import { moveAside } from './animation';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  animations: [moveLeft],
+  animations: [moveAside],
 })
 export class AppComponent implements OnInit {
   public title = 'Black Jack';
