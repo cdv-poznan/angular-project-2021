@@ -1,0 +1,30 @@
+$maroon: #561f37;
+$snow: #FFFBFF;
+
+.card {
+  font-size: xx-large;
+  display: inline-block;
+  align-content: center;
+  background: $snow;
+  border: 2px $maroon solid;
+  border-radius: 10%;
+  box-shadow: 2px 2px 8px #333;
+  padding: 10px;
+  margin: auto;
+  text-align: center;
+  span{
+    top: 20px;
+    position: relative;
+    padding: 5px;
+    margin: 5px;
+  }
+}
+@media (min-width: 800px) {
+.card{
+  height: 14vw;
+  width: 9vw;
+span{
+  font-size: 9vw;
+}
+}
+}

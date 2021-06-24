@@ -1,0 +1,10 @@
+$blue: #2B59C3;
+$snow: #FFFBFF;
+
+#standBtn{
+  box-shadow: 2px 2px 8px #333;
+  margin: 4px;
+  background-color: $blue;
+  color: $snow;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='100' ry='100' stroke='%23FFFBFFFF' stroke-width='10%' stroke-dasharray='25%25%2c 10%25' stroke-dashoffset='62' stroke-linecap='butt'/%3e%3c/svg%3e");
+}

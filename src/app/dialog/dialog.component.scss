@@ -1,0 +1,17 @@
+$gold: #bfae48;
+
+.score{
+  background: #333;
+  color: $gold;
+  border: 5px $gold groove;
+  margin: 20px auto;
+  padding: 5px;
+}
+.dialButton{
+  font-size: larger;
+  color: #561f37;
+  margin: 16px;
+&:hover{
+  color: #bfae48;
+} }
+

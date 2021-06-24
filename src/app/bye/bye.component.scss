@@ -1,0 +1,13 @@
+h2{
+  text-shadow: 2px 2px 8px #561f37;
+  margin: auto;
+  font-size: 10vw;
+  color: #bfae48;
+  padding-top: 20vh;
+  line-height: 1.6;
+}
+
+@media (max-width: 400px) {
+  h2{
+    font-size: 10vh!important}
+}

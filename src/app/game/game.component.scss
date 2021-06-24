@@ -1,0 +1,27 @@
+$gold: #bfae48;
+$snow: #FFFBFF;
+$gold: #bfae48;
+
+section{
+  padding-top: 2vh;
+  margin: 16px;
+}
+
+strong{
+    color: $snow;
+    font-size: larger;
+  }
+
+.score{
+  font-size: x-large;
+  background: #333;
+  color: $gold;
+  border: 5px $gold groove;
+  margin: 20px auto;
+  padding: 5px;
+}
+#standBtn{
+  position: fixed;
+  bottom: 20px;
+  right: 40px;
+}

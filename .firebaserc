@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "blackjackcdv": {
+      "hosting": {
+        "angular-project": [
+          "blackjackcdv"
+        ]
+      }
+    }
+  }
+}
