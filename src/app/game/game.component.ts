@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NewDeckService } from './new-deck.service';
 import { Card } from './card';
-import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { DialogComponent } from '../dialog/dialog.component';
 import { NavigationEnd, Router } from '@angular/router';
 
@@ -79,6 +79,9 @@ export class GameComponent implements OnInit, OnDestroy {
     } else if (this.sum(this.dealersHand) < this.sum(this.playersHand)) {
       console.log('You win!');
       return this.openDialog('Your hand is higher - you win!');
+    } else if (this.sum(this.dealersHand) === this.sum(this.playersHand)) {
+      console.log('Draw!');
+      return this.openDialog('Draw!');
     } else {
       console.log('You lose!');
       return this.openDialog(`Dealer's hand is higher - you lose!`);
