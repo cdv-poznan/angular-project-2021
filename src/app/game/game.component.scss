@@ -4,7 +4,7 @@ $gold: #bfae48;
 
 section{
   padding-top: 2vh;
-  margin: 16px;
+  margin: 1vh;
 }
 
 strong{
@@ -17,11 +17,6 @@ strong{
   background: #333;
   color: $gold;
   border: 5px $gold groove;
-  margin: 20px auto;
-  padding: 5px;
-}
-#standBtn{
-  position: fixed;
-  bottom: 20px;
-  right: 40px;
+  margin: 1vh auto;
+  padding: 0.5vh;
 }

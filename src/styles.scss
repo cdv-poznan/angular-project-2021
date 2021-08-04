@@ -29,6 +29,7 @@ body {
   text-align: center;
   display: block;
   background-color: $green;
+  overflow-x: hidden;
 }
 
 header {
@@ -58,10 +59,7 @@ h1 {
 }
 
 @media (min-width: 800px) {
-  main{
-    max-height: 90%;
-  }
-  h1{   font-size: xxx-large;
+   h1{   font-size: xxx-large;
   }
   .home, button {
     font-size: 1.5rem;
