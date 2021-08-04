@@ -9,14 +9,14 @@ $snow: #FFFBFF;
   border: 2px $maroon solid;
   border-radius: 10%;
   box-shadow: 2px 2px 8px #333;
-  padding: 10px;
+  padding: 1vw;
   margin: auto;
   text-align: center;
   span{
-    top: 20px;
+    top: 2vw;
     position: relative;
-    padding: 5px;
-    margin: 5px;
+    padding: 0.5vw;
+    margin: 0.5vw;
   }
 }
 @media (min-width: 800px) {

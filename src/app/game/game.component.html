@@ -14,7 +14,9 @@
   <app-card *ngIf='playersHand.length >= 3' [card]='playersHand[2]'></app-card>
   <app-card *ngIf='playersHand.length >= 4' [card]='playersHand[3]'></app-card>
   <app-card *ngIf='playersHand.length >= 5' [card]='playersHand[4]'></app-card>
+  <div>
   <app-hit-button (click)='playerHits()'></app-hit-button><app-stand-button (click)='playerStands()'></app-stand-button>
+  </div>
 </main>
 
 
