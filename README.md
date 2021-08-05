@@ -1,4 +1,6 @@
-This is a simple Blackjack game, no images - CSS only.
+This is a simple Blackjack game.
+I'm well aware that it could have been more complex, but its main role was to showcase my frontend skills.
+
 Built with Angular 
 https://blackjackcdv.web.app/
 
