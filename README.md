@@ -2,7 +2,7 @@ This is a simple Blackjack game.
 I'm well aware that it could have been more complex, but its main role was to showcase my frontend skills.
 
 Built with Angular, hosted on Google Firebase - check it out here:
-[https://blackjackcdv.web.app/](https://blackjackcdv.web.app/)
+[`https://blackjackcdv.web.app/`](https://blackjackcdv.web.app/)
 
 # Angular Project
 
